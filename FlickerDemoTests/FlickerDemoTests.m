@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "CommonFunctions.h"
 
 @interface FlickerDemoTests : XCTestCase
 
@@ -34,6 +35,30 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+- (void)testImageURL
+{
+    NSString *urlStr = [[CommonFunctions sharedFunctions] searchURL:@"kitten" withPageNumber:1];
+    
+    if([urlStr isEqualToString:@"error"])
+    {
+        XCTFail();
+    }
+    
+    NSString *urlStrWithoutSearchText = [[CommonFunctions sharedFunctions] searchURL:@"" withPageNumber:1];
+    
+    if(![urlStrWithoutSearchText isEqualToString:@"error"])
+    {
+        XCTFail();
+    }
+    
+    NSString *urlStrWithoutPage = [[CommonFunctions sharedFunctions] searchURL:@"kitten" withPageNumber:0];
+    
+    if(![urlStrWithoutPage isEqualToString:@"error"])
+    {
+        XCTFail();
+    }
 }
 
 @end

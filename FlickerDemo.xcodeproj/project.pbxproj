@@ -16,6 +16,10 @@
 		18EA247F21381E89007E262D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA247E21381E89007E262D /* main.m */; };
 		18EA248921381E89007E262D /* FlickerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA248821381E89007E262D /* FlickerDemoTests.m */; };
 		18EA249421381E89007E262D /* FlickerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA249321381E89007E262D /* FlickerDemoUITests.m */; };
+		18EA24AE213942B7007E262D /* WebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA24AD213942B7007E262D /* WebServices.m */; };
+		18EA24B721397150007E262D /* FlickrUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA24B621397150007E262D /* FlickrUtility.m */; };
+		18EA24BF213A8C96007E262D /* CommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA24BE213A8C96007E262D /* CommonFunctions.m */; };
+		18EA24C4213B473F007E262D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 18EA24C3213B473F007E262D /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		18EA248F21381E89007E262D /* FlickerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18EA249321381E89007E262D /* FlickerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickerDemoUITests.m; sourceTree = "<group>"; };
 		18EA249521381E89007E262D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18EA24AC213942B7007E262D /* WebServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebServices.h; sourceTree = "<group>"; };
+		18EA24AD213942B7007E262D /* WebServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebServices.m; sourceTree = "<group>"; };
+		18EA24B521397150007E262D /* FlickrUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlickrUtility.h; sourceTree = "<group>"; };
+		18EA24B621397150007E262D /* FlickrUtility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrUtility.m; sourceTree = "<group>"; };
+		18EA24BC213A81EE007E262D /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		18EA24BD213A8C96007E262D /* CommonFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonFunctions.h; sourceTree = "<group>"; };
+		18EA24BE213A8C96007E262D /* CommonFunctions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonFunctions.m; sourceTree = "<group>"; };
+		18EA24C3213B473F007E262D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,7 @@
 		18EA246021381E80007E262D = {
 			isa = PBXGroup;
 			children = (
+				18EA24C3213B473F007E262D /* README.md */,
 				18EA246B21381E80007E262D /* FlickerDemo */,
 				18EA248721381E89007E262D /* FlickerDemoTests */,
 				18EA249221381E89007E262D /* FlickerDemoUITests */,
@@ -103,6 +116,7 @@
 		18EA246B21381E80007E262D /* FlickerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				18EA24B121395FFD007E262D /* Utilities */,
 				18EA246C21381E80007E262D /* AppDelegate.h */,
 				18EA246D21381E81007E262D /* AppDelegate.m */,
 				18EA246F21381E81007E262D /* ViewController.h */,
@@ -133,6 +147,44 @@
 				18EA249521381E89007E262D /* Info.plist */,
 			);
 			path = FlickerDemoUITests;
+			sourceTree = "<group>";
+		};
+		18EA24B121395FFD007E262D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				18EA24C2213B3BEA007E262D /* CommonFunctionsUtility */,
+				18EA24C1213B3BC3007E262D /* WebServicesUtlity */,
+				18EA24B82139A150007E262D /* Flickr */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		18EA24B82139A150007E262D /* Flickr */ = {
+			isa = PBXGroup;
+			children = (
+				18EA24B521397150007E262D /* FlickrUtility.h */,
+				18EA24B621397150007E262D /* FlickrUtility.m */,
+			);
+			path = Flickr;
+			sourceTree = "<group>";
+		};
+		18EA24C1213B3BC3007E262D /* WebServicesUtlity */ = {
+			isa = PBXGroup;
+			children = (
+				18EA24AC213942B7007E262D /* WebServices.h */,
+				18EA24AD213942B7007E262D /* WebServices.m */,
+				18EA24BC213A81EE007E262D /* Constants.h */,
+			);
+			path = WebServicesUtlity;
+			sourceTree = "<group>";
+		};
+		18EA24C2213B3BEA007E262D /* CommonFunctionsUtility */ = {
+			isa = PBXGroup;
+			children = (
+				18EA24BD213A8C96007E262D /* CommonFunctions.h */,
+				18EA24BE213A8C96007E262D /* CommonFunctions.m */,
+			);
+			path = CommonFunctionsUtility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +292,7 @@
 			files = (
 				18EA247C21381E89007E262D /* LaunchScreen.storyboard in Resources */,
 				18EA247921381E89007E262D /* Assets.xcassets in Resources */,
+				18EA24C4213B473F007E262D /* README.md in Resources */,
 				18EA247421381E81007E262D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18EA247121381E81007E262D /* ViewController.m in Sources */,
+				18EA24AE213942B7007E262D /* WebServices.m in Sources */,
 				18EA247721381E81007E262D /* FlickerDemo.xcdatamodeld in Sources */,
 				18EA247F21381E89007E262D /* main.m in Sources */,
+				18EA24B721397150007E262D /* FlickrUtility.m in Sources */,
+				18EA24BF213A8C96007E262D /* CommonFunctions.m in Sources */,
 				18EA246E21381E81007E262D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
